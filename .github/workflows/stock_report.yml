@@ -2,37 +2,25 @@ name: דוח שוק ההון
 
 on:
   schedule:
-    # ימים ב' ו-ה' בשעה 06:00 UTC = 08:00 בישראל (UTC+2 / UTC+3 בקיץ)
-    # ב' = יום שני = 1 , ה' = יום חמישי = 4
     - cron: '0 6 * * 1,4'
-
-    # מוצאי שבת = שבת בלילה = UTC שבת 19:00 = 21:00 שעון ישראל (קיץ)
-    # בחורף (UTC+2) יש לשנות ל-19:00 UTC
     - cron: '0 19 * * 6'
-
-  # אפשרות להפעלה ידנית מהאתר (לבדיקות)
   workflow_dispatch:
 
 jobs:
   send-report:
     runs-on: ubuntu-latest
-
     steps:
       - name: שליפת הקוד
         uses: actions/checkout@v4
-
       - name: התקנת Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: התקנת ספריות
         run: pip install -r requirements.txt
-
       - name: הרצת הסקריפט
         env:
           SENDER_EMAIL:    ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python stock_report.py
-
