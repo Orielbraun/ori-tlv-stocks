@@ -19,9 +19,9 @@ import numpy as np
 # הגדרות — ערוך כאן את הרשימה שלך
 # ============================================================
 ASSETS = [
-    {"symbol": "^TA35",      "name": "מדד תל אביב 35"},
-    {"symbol": "^TABAN5",    "name": "מדד בנקים 5"},
-    {"symbol": "KNTX.TA",   "name": "קינסטון אינפרא"},
+   {"symbol": "TA35.TA",    "name": "מדד תל אביב 35"},
+{"symbol": "TABAN5.TA",  "name": "מדד בנקים 5"},
+{"symbol": "KNST.TA",    "name": "קינסטון אינפרא"},
     {"symbol": "ILS=X",      "name": "דולר/שקל"},
     {"symbol": "EURILS=X",   "name": "אירו/שקל"},
 ]
