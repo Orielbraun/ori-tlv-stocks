@@ -1,4 +1,5 @@
-import yfinance as yf
+
+     import yfinance as yf
 import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
@@ -20,8 +21,8 @@ import numpy as np
 # ============================================================
 ASSETS = [
     {"symbol": "TA35.TA",   "name": "מדד תל אביב 35"},
-   {"symbol": "TA-BANKS.TA",  "name": "מדד בנקים 5"},
-    {"symbol": "KNST.TA",   "name": "קינסטון אינפרא"},
+    {"symbol": "TA-BANKS.TA", "name": "מדד בנקים 5"},
+    {"symbol": "KNST.TA",    "name": "קינסטון אינפרא"},
     {"symbol": "USDILS=X",  "name": "דולר/שקל"},
     {"symbol": "EURILS=X",  "name": "אירו/שקל"},
 ]
